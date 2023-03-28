@@ -21,8 +21,9 @@ public class Generics<T> {
     }
 
     //TODO: Refactor Method-3
-    public   void cloneMethod(List<T> consumer, List<T> producer) {
-     producer.addAll(consumer);
+    public   void cloneMethod(List<? super T> consumer, List<? extends T> producer) {
+
+        consumer.addAll(producer);
     }
 
 }
